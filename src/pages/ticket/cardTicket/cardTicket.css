@@ -1,0 +1,411 @@
+﻿@CHARSET "UTF-8";
+*{ margin:0; padding:0; list-style:none;-webkit-tap-highlight-color:rgba(255,255,255,0);}
+img{ width:100%; vertical-align:top;}
+.colorOrange{color:#DE7E69;}
+.colorGreen{color:#B5DE6B;}
+/*reset样式重置  end*/
+.eps{display:block;white-space:nowrap;word-break:keep-all;overflow:hidden;text-overflow:ellipsis;}
+.bg{min-height:100%;}
+.top{position:fixed;background:#fff;margin-bottom:2rem;overflow: auto;width: 100%;z-index: 10;}
+.top div{color:#1B1B1B;font-size:1.7rem;width: 50%;float: left;padding: 1.5rem 0;}
+.top div.active{color: #FFBB0A;}
+.top .split{position: absolute;top: 1.5rem;bottom: 1.5rem;border-right: 1px solid #ECECEF;width: 0;left: 50%;padding: 0;}
+
+.ticket-rule{
+	padding: 1.5rem 0;
+	text-align: center;font-size: 1.7rem;
+	background-color: white;
+}
+.top .active-line{
+	position: absolute;
+	border-bottom: 4px solid #FFBB0A;
+	width: 40%;bottom: 0;left: 5%;
+	transition: 0.3s;
+}
+
+#ticket,#ticket2{padding-bottom:2rem;}
+
+.ticketBox{position:relative;margin:0 1rem 2rem;background:#fff;border:1px solid #E0E4E5;border-top:none;border-radius:9px;}
+.ticketBox header{border-top-left-radius:9px;border-top-right-radius:9px;height:5.5rem;font-weight:bold;display:-webkit-box;padding:0 0.5rem;background:url(http://img.wgmf.com/ticket/img4.png) repeat-x left center;background-size:1rem 5.5rem;}
+.ticketBox .left{-webkit-box-flex:1;color:#fff;font-size:1.8rem;line-height:5.5rem;font-weight:bold;text-align:left;padding-right:0.5rem;}
+.ticketBox .right{padding:1rem 1rem 0 0;}
+.ticketBox .right b{color:#fff;}
+.ticketBox .right .use{display:block;border:1px solid #fff;margin-top:0.5rem;padding:0.5rem 1rem;background:;border-radius:4px;color:#fff;}
+.ticketBox .right .sp{color:#1358B1;display:none;background:url(../../images/cardTicket/img11.gif) no-repeat left center;background-size:0.1rem 2rem;padding-left:1.5rem;}
+.ticketBox .right b{font-size:1.6rem;}
+.ticketBox .box{padding:1rem;font-size:1.4rem;text-align:left;}
+.ticketBox .p2{position:relative;}
+.ticketBox .p2 .pl{font-weight:bold;color:#323232;}
+.ticketBox .p2 .pr{position:absolute;right:-1rem;color:#fff;background:#5D9DE3;padding:0 0.3rem;border-top-left-radius:5px;border-bottom-left-radius:5px;}
+.ticketBox .box p{line-height:2rem;}
+.ticketBox .p1{color:#989898;}
+.ticketBox .p1 article{padding:1rem 0 0.5rem;font-size:1.6rem;}
+.ticketBox .p1 b{display:inline-block;width:1.1rem;height:0.5rem;margin-left:1rem;background:url(../../images/cardTicket/img9.gif) no-repeat left center;background-size:100% 100%;}
+.ticketBox .p1 section{display:none;}
+
+.ticketBox.xianShang header{background:url(http://img.wgmf.com/ticket/img3.png) repeat-x left center;background-size:1rem 5.5rem;}
+.ticketBox.xianShang .p2 .pr{background:#FEBC1A}
+
+.ticketBox.pastDue header,.ticketBox.hasUsed header{background:url(http://img.wgmf.com/ticket/img5.png) repeat-x left center;background-size:1rem 5.5rem;}
+.ticketBox.pastDue .p2 .pr,.ticketBox.hasUsed .p2 .pr{background:#CECFD0}
+.ticketBox.pastDue .p2 .pl,.ticketBox.hasUsed .p2 .pl{color:#989898;}
+.ticketBox.pastDue .right .sp,.ticketBox.hasUsed .right .sp{color:#989898;background:url(../../images/cardTicket/img12.gif) no-repeat left center;background-size:0.1rem 2rem;}
+
+.noTicket{margin:7rem auto;width:50%;}
+.noTicket img{padding-bottom:2rem;}
+
+.number{text-align:center;}
+.number a{display:inline;color:#ffa800;font-size:1.6rem;}
+
+.foot{position:fixed;bottom:2rem;right:0;width:100%;width:6.5rem;height:6rem;text-align:center;}
+
+/* 弹出框 */
+.pop-bg{display:none;position:fixed;left:0;top:0;width:100%;height:100%;background:#000;opacity:0.40;filter:alpha(opacity=40);z-index:99;}
+.pop{display:none;position:fixed;left:50%;top:50%;-webkit-transform:translate(-50%,-50%);z-index:101;background: #fff;}
+.rules{width:85%;background:#FFFCF4;padding:2rem 1rem;border-radius:5px;text-align:left;}
+.rules p{line-height:2rem;}
+.pop .closePop{position:absolute;right:0;top:0;display:block;width:3rem;height:3rem;background:url(../../images/sanXiangPao/close.gif) center center no-repeat;background-size:1.2rem 1.2rem;}
+
+#load{position:fixed;left:50%;top:50%;-webkit-transform:translate(-50%,-50%);}
+#load img{width:3.1rem;height:3.1rem;}
+
+.border{
+	border: 1px solid red;
+}
+
+.body{background: none;padding: 0;background-color: #EBEBEB;}
+.sub-color{color: #B8B8B8;}
+.ticket-use{
+	background-color: white;
+	width: 90%;
+	margin: 20px auto;
+	border-radius: 5px;
+}
+.radius-x{border-radius: 5px;}
+.ticket-use-header{
+	position: relative;
+	padding: 15px 0px;
+	background-color: #F7F7F7;
+	border-radius: 5px 5px 0 0;
+	border-bottom: 1px dashed #B8B8B8 !important;
+}
+.ticket-use-header>span{
+	position: absolute;
+	bottom: -10px;
+	width: 20px;height: 20px;
+	background-color: #EBEBEB;
+	border-radius: 50%;
+}
+.ticket-use-header .left-radius{
+	left:-10px;
+}
+.ticket-use-header .right-radius{
+	right:-10px;
+}
+.ticket-use-header>div{
+	height: 100%;
+}
+.ticket-use-header .u-left{
+	text-align: left;
+	padding-left: 20px;
+}
+.u-left .name{
+	font-size: 18px;
+	font-weight: bold;
+}
+.u-left .time{
+	font-size: 14px;
+	margin-top: 10px;
+}
+.ticket-use-header .u-right{
+	width: 120px;
+	float: right;
+	text-align: center;
+	height: 100%;
+}
+.u-right span{
+	background-color: #EBEBEB;
+	color: #919191;
+	font-size: 14px;
+	padding: 10px;
+	border-radius: 40px;
+}
+.u-right font{
+	color: #FF6031;font-size: 20px;padding: 0 3px;
+}
+.ticket-use-body{border-radius:0 0 5px 5px;}
+.ticket-code{
+	padding: 30px 0 !important;
+	background: none !important;
+	border-top: none !important;
+	text-align: center;
+}
+.ticket-code .code{
+	font-size: 24px;
+	font-weight: bold;
+}
+.staff-info{
+	padding: 20px 0 !important;
+	margin-right: 20px;
+	border-top: 1px dashed #B8B8B8 !important;
+	background: none !important;
+}
+.staff-info .icon-phone{
+	width: 60px;
+	border-left: 1px solid #EFEFEF;
+	background:url(../../images/cardTicket/phone.png) center no-repeat #fff;
+	background-size: 20px auto;
+	position: relative;
+}
+.staff-info .icon-phone a{
+	position: absolute;
+	top: 0;bottom: 0;
+	left: 0;right: 0;
+}
+.staff-name{font-weight: bold;}
+.ticket-info-list{text-align: left;border-radius:0 0 5px 5px;}
+.ticket-info-list li{
+	margin-left: 20px;
+	font-size: 16px;
+	color: #363636;
+	padding: 15px 0;
+	border-top: 1px solid #F0F0F0;
+	background:url(../../images/member/icon3.gif) 95% center no-repeat #fff;
+	background-size: 10px auto;
+}
+.ticket-use-rule{
+	text-align: left;margin: 0 auto;width: 90%;
+	padding-bottom: 20px;
+}
+/*integralRemind.html*/
+.remind-header{
+	color: white;
+	height: 100px;
+	background:url(../../images/cardTicket/header-bg.png) center no-repeat #fff;
+	background-size: 100% 100%;
+	position: relative;
+}
+.remind-header>div{
+	display: inline-block;
+	width: 50%;
+	float: left;
+	padding-top: 35px;
+}
+.remind-header>.split{
+	position: absolute;
+	width: 0;
+	border-left: 1px solid rgba(255,255,255,0.4);
+	height: 30px;
+	top: 35px;
+	left: 50%;
+}
+.sub-font{font-size: 16px;}
+.bold-font{font-size: 20px;font-weight: bold;}
+.active-bg{
+	background:url(../../images/cardTicket/activity-bg.png) center no-repeat;
+	background-size:90% auto;
+	height: 100px;
+	position: relative;
+}
+@media only screen and (min-width: 400px) {
+	.active-bg{
+		height: 120px;
+	}
+}
+@media only screen and (min-width: 500px) {
+	.active-bg{
+		height: 220px;
+	}
+}
+.active-text{
+	position: absolute;
+	left: 42%;
+	top: 35%;
+	text-align: left;
+	color: white;
+}
+.font-12{font-size: 12px;}
+.font-24{font-size: 24px;font-weight: bold;}
+.integral-exchange{
+	margin-top: 10px;
+}
+.exchange-list{
+	padding: 10px 0;
+	overflow: auto;
+	background-color: #F7F7F7;
+}
+.exchange-list>div{
+	width: 30%;
+	/*height: 100px;*/
+	float: left;
+	border: 1px solid #f9f9f9;
+	border-radius: 5px;
+	margin-left: 2%;
+}
+.img-content{
+	background-color: gray;
+	font-size: 12px;
+	position: relative;
+}
+.img-content .tuijian{
+	background:url(../../images/cardTicket/tuijian.png) no-repeat;
+	background-position: 0 -30px;
+	background-size: 50px auto;
+	position: absolute;
+	right: 0;top: 0;
+	width: 50px;
+	height: 50px;
+}
+.more-header{
+	padding: 10px 15px;
+	background-color: white;
+	font-size: 14px;
+}
+.more-header>img{
+	width: 80px;
+	float: left;
+}
+.more-header>div{
+	background:url(../../images/member/icon3.gif) 100% center no-repeat #fff;
+	background-size: 10px auto;
+	text-align: right;
+	padding-right:20px ;
+}
+.exchange-staff{
+	margin: 20px 0;
+}
+.shop-item{
+	width: 100%;
+	padding: 5px 0px;
+	background-color: #FAFAFA;
+	text-align: left;
+	border: none;
+	overflow: auto;
+}
+.shop-icon{
+	width:70px;
+	height: 60px;
+	background: url(../../images/cardTicket/icon-staff.png) no-repeat center;
+	background-size: 40px 40px;
+	float: left;
+}
+.shop-info{padding-right: 10px;}
+.shop-info .name{font-size: 18px;font-weight: bold;color: #363636;height: 50%;line-height: 30px;}
+.shop-info .address{font-size: 16px;color: #B2B2B2;height: 50%;}
+
+/*staffDetail.html*/
+.staff-header{
+	height: 100px;
+	background: url(../../images/cardTicket/staff-header.png) no-repeat center;
+	background-size: 100% 100%;
+	color: white;
+}
+.staff-detail-icons{
+	float: right;
+	width: 120px;
+	height: 100%;
+	padding:0 10px;
+	position: relative;
+}
+.staff-detail-icons>div{
+	float: left;
+	width: 50%;
+}
+.staff-detail-icons .split-line{
+	position: absolute;
+	width: 0;top: 50%;height: 15px;
+	border-left: 1px solid #494640;
+	margin-top: -8px;
+	left: 50%;
+}
+.staff-like-icon{
+	background: url(../../images/cardTicket/icon4.png) no-repeat center/25px auto;
+	padding-top: 60px;
+	/*text-align: left;*/
+}
+.staff-like-icon.liked{
+	background: url(../../images/cardTicket/icon3.png) no-repeat center /25px auto !important;
+	color: #DDA31A;
+}
+.staff-change-icon{
+	background: url(../../images/cardTicket/icon5.png) no-repeat center 30px/25px auto;
+	padding-top: 60px;
+}
+.staff-detail-name{
+	padding-top: 30px;
+	font-size: 18px;
+	text-align: left;
+	padding: 30px 0 0 10px;
+}
+.staff-location,.staff-salesman{
+	background: url(../../images/cardTicket/icon1.png) no-repeat 10px center /15px auto;
+	background-color: white;
+	padding: 15px 10px 15px 40px;
+	text-align: left;
+	font-size: 16px;
+	color: #454545;
+	border-bottom: 1px solid #EAEAEA;
+}
+.salesman-tel{
+	margin: 10px 0;
+}
+.salesman-tel a{
+	display: inline-block !important;	
+}
+.sub-font{
+	color: #C8C8C8;
+	font-size: 14px;
+}
+.total-comment{
+	padding-top: 5px;
+}
+.staff-salesman{
+	background: url(../../images/cardTicket/icon2.png) no-repeat 10px center /20px auto;
+	background-color: white;
+	padding: 15px 10px 15px 40px;
+	text-align: left;
+	font-size: 16px;
+	overflow: auto;
+}
+.staff-salesman>div{
+	float: left;
+}
+.staff-salesman .left{
+	width: 70%;
+}
+.staff-salesman .right{
+	width: 30%;
+}
+.staff-salesman .star{
+	width: 100px;
+}
+.staff-salesman .star>span{
+	width: 20px;
+	height: 20px;
+	float: left;
+	background: url(../../images/member/star2.png) no-repeat left center /15px auto;
+}
+.staff-salesman .star>span.active{
+	background: url(../../images/member/star1.png) no-repeat left center /15px auto !important;
+}
+.staff-salesman .right{
+	padding-top: 10px;
+	text-align: center;
+}
+.staff-salesman .right>span{
+    color: white;
+    background-color: #F86615;
+    padding: 10px 5px;
+    border-radius: 5px;
+}
+.active-recomend{
+	margin-top: 15px;
+	background-color: white;
+	padding: 0 20px 50px 20px;
+}
+.active-recomend .staff-active-title{
+	text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 0;
+}

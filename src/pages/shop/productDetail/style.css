@@ -1,0 +1,340 @@
+#app{
+	background-color: #DCDCDC;
+	font-size: 1.5rem;
+}
+.coupon-bg{
+	display: none;
+	align-items:center;
+}
+.coupon-bg,.comments-bg,.groups-bg{
+	position: fixed;
+	top: 0;bottom: 0;
+	left: 0;right: 0;
+	background-color: rgba(0,0,0,0.6);
+	transition: 0.3s;
+    z-index: 100;
+}
+.coupon-bg img{
+	position: absolute;
+	width: 100%;
+    vertical-align: middle;
+}
+.slide-bottom-enter-active,
+.slide-bottom-leave-active {
+	transition: all .2s ease;
+}
+.slide-bottom-enter,
+.slide-bottom-leave-active{
+	opacity: 0;
+}
+.banner-container{
+	position: relative;
+}
+.banner-box{
+	position: absolute;
+	top: 0;bottom: 0;
+	left: 0;right: 0;
+	z-index: 3;
+	background: url(http://img.wgmf.com/product/image/cover_loot_all_2.png) no-repeat center / 100% auto rgba(0,0,0,0.5);
+}
+.box-info{
+	background-color: white !important;
+	margin-bottom: 0.6rem;
+}
+.product_name{
+	font-size: 1.8rem;
+	font-weight: bold;
+	color: #4E4E4E;
+}
+.sale_price{
+	font-size: 2.2rem;
+	color: #FF4103;
+	font-weight: bold;
+}
+.or_price{
+	font-size: 1.6rem;
+	color: #B6B6B6;
+	text-decoration: line-through;
+}
+.sale_price span,.integralStatus{
+	background-color: #FF4103;
+	margin-left:1rem ;
+	color: white;
+	font-size: 1.4rem;
+    display: inline-block;
+    padding: 0.1rem 0.2rem;
+    border-radius: 0.3rem;
+}
+
+.product_stock{
+	text-align: center;
+}
+.product_stock span{
+	display: inline-block;
+	padding: 1rem 1.5rem;
+	background-color: white;
+	position: relative;
+	z-index: 1;
+}
+.feature{
+    overflow: hidden;
+	padding: 1rem 1.5rem 0 1rem;
+}
+.feature span {
+    float: left;
+    font-size: 1.4rem;
+    padding-left: 1.8rem;
+    margin: 0 1.5rem 1rem 0;
+    color: #808080;
+    background: url("http://7xv1io.com1.z0.glb.clouddn.com/true.png") 0 center no-repeat;
+    background-size: contain;
+}
+.receiveTime{text-align: center;color: red;font-weight: bold;padding: 1.5rem;}
+.combo_container{
+	padding-left: 1rem;
+}
+.combo_title{
+	background: url(http://7xv1io.com1.z0.glb.clouddn.com/product/image/label_combo.png) no-repeat right center/auto 100%;
+	height: 4rem;line-height: 4rem;
+	border-bottom: 1px solid #DCDCDC;
+}
+.combo_content{
+	padding: 1rem 0;
+	overflow: auto;
+}
+.combo_content span{
+	float: left;
+	font-size: 2.8rem;
+	height: 11rem;
+	line-height: 11rem;
+	color: #A5A5A5;
+	width: 8%;
+	text-align: center;
+}
+.combo_item{
+	float: left;
+	width: 26%;
+}
+.combo_img{
+	width: 100%;
+	height: 9rem;
+	padding-top: 1rem;
+	text-align: center;
+}
+.combo_img img{
+	max-width: 100%;
+	max-height: 100%;
+}
+.combo_price{
+	color: #FF0300;
+	font-size: 1.8rem;
+	font-weight: bold;
+}
+.internal_status{
+	height: 3rem;
+	line-height: 3rem;
+	padding:1rem 3rem 1rem 1rem;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+    background: url(http://7xqiu3.com1.z0.glb.clouddn.com/btn_store_more.png) no-repeat 98% center/20px auto;
+}
+.internal_status span{
+	border: 1px solid red;
+	color: red;
+	padding: .5rem 1rem;
+	border-radius: .5rem;
+}
+.limit_price{
+	padding: 0.6rem 1rem;
+	font-size: 1.4rem;
+	height: 3rem;
+	line-height: 3rem;
+}
+.limit_name{
+	background: #FF4103;
+	color: white;
+	padding: .4rem;
+	border-radius: 3px;
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.less_price{
+	color: #FF4103;
+	margin: 0 .5rem;
+}
+.nav-tab{
+	overflow: auto;
+	background-color: white;
+	border-bottom: 1px solid #DCDCDC;
+}
+.float-top{
+	position:fixed;top:0;left:0;right:0;background: white;z-index:30;
+}
+.nav-item{
+	float: left;
+	width: 50%;
+}
+.nav-item span{
+	display: block;
+	width: 80%;
+	color:#363636;
+	margin: 0 auto;
+	height: 100%;
+	line-height: 4rem;
+	text-align: center;
+}
+.nav-item.active span{
+	border-bottom: 2px solid #ff6600;
+}
+.nav-content{
+	background-color: white;
+	margin-bottom: 5.5rem;
+}
+.product-detail{
+	overflow: auto;
+}
+.product-detail img{
+	float: left;
+	width: 100%;
+}
+.product-attr{
+	color:#363636;
+	
+}
+.attr-line{
+	overflow: auto;
+	border-bottom: 1px solid #DCDCDC;
+	padding: 1rem;
+}
+.attr-line .attr-name{
+	float: left;
+	width: 35%;
+}
+.attr-line .attr-value{
+	float: left;
+	width: 65%;
+}
+.bottom-cart{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 5.5rem;
+	background-color: white;
+	z-index:10;
+}
+.bottom-cart>div{
+	float: left;
+	text-align: center;
+}
+.my-icon{
+	width: 20%;
+	border-top: 1px solid #CECECE;
+	color: gray;
+	padding-top: 3rem;
+	position: relative;
+	height: 100%;
+}
+.my-cart{
+	border-left: 1px solid #CCCCCC;
+	box-sizing: border-box;
+	background: url(http://7xv1io.com1.z0.glb.clouddn.com/product/image/btn_bottom_shopping_cart_1.png) no-repeat 46% 0.5rem /2.5rem auto;
+}
+.my-service{
+	background: url(http://7xv1io.com1.z0.glb.clouddn.com/memberXb-btn_bottom_store_1.png) no-repeat 46% .5rem /2.5rem auto;
+}
+.my-icon .my-cart-num{
+	display: inline;
+	position: absolute;
+	top: .3rem;
+	left: 58%;
+	height: 2rem;
+	min-width: 2rem;
+	line-height: 2rem;
+	border-radius: 50%;
+	background-color: red;
+	color: white;
+	font-size: 1.2rem;
+	text-align: center;
+}
+.add-cart,.buy-now{
+	line-height: 5.5rem;
+	width: 30%;
+	color: white;
+	font-weight: bold;
+}
+.add-cart{
+	background-color: #FF8C1D;
+}
+.buy-now{
+	background-color: #FF491D;
+}
+.yfk-label{
+	float: left;
+	width: 50%;
+    color: #FF491D;
+    font-weight: bold;
+    line-height: 5.5rem;
+    border-left: 1px solid #DCDCDC;
+    border-top: 1px solid #DCDCDC;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.group-btn{
+	width: 40% !important;
+	float: left;
+	color: white;
+	height: 100%;
+	font-weight: normal !important;
+}
+.group-btn.single{
+	background-color: #FFA726;
+}
+.group-btn .txt{
+	height: 60%;
+	line-height: 3.3rem;
+	font-size: 1.6rem;
+}
+.group-btn .sub-txt{
+	height: 40%;
+	font-size: 1.4rem;
+	line-height: 2rem;
+}
+.add-cart.disabled,.group-btn.disabled{
+	background-color: #DCDCDC !important;
+}
+.buy-now.disabled{
+	background-color: #CCCCCC !important;
+}
+.quantity-bg img{
+	width: 100%;
+}
+.show_code{
+	position: absolute;
+	width: 80%;
+	left: 10%;
+	top: 100px;
+	padding: 10px;
+	box-sizing: border-box;
+}
+.group_code_bg{
+	text-align: center;
+	position: relative;
+}
+.group_code_bg .code {
+	width: 60%;
+	position: absolute;
+	left: 20%;
+	top: 32%;
+}
+.show_code .close{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: -15px;
+	right: -15px;
+}

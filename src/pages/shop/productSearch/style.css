@@ -1,0 +1,71 @@
+html,body,img,a{
+	margin: 0;
+	padding: 0;
+	font-size: 62.5%;
+    font-family: "华文细黑","Microsoft YaHei","Helvetica Neue",Helvetica;
+}
+img{
+	width: 100%;
+	height: auto;
+	clear: both;
+	vertical-align:bottom;
+	margin-bottom: -1px;
+}
+.container{
+	padding-bottom: 6rem;
+}
+.pro_row{overflow: hidden;}
+
+.pro_relative{position: relative;}
+.pro_relative .text{
+	position: absolute;
+	bottom: 9px;
+	width: 30%;
+	height: auto;
+	left: 35%;
+}
+.pro_title{margin: 25px 10px 5px 10px;}
+.pro_col1,.pro_col2,.pro_col4,.pro_col5,.pro_col3{float: left;box-sizing: border-box;}
+.pro_col2{width: 100%;}
+.pro_col1{width: 50%;}
+.pro_col3{width: 33.333%;}
+.pro_col4{width: 25%;}
+.pro_col5{width: 20%;}
+.cross{
+	padding:5px 0;
+	height: 60px;
+	line-height: 10px;
+}
+.pro-header{padding-top: 10px;}
+.pro-search{
+	border: 1px solid #9F9F9D;
+	height: 35px;
+	line-height: 35px;
+	padding-left: 45px;
+	padding-right: 60px;
+	border-radius: 5px;
+	color: #C0B8AB;
+	box-shadow: #9F9F9D 1px 2px 3px;
+	-webkit-box-shadow: #9F9F9D 1px 2px 3px;
+	-moz-box-shadow: #9F9F9D 1px 2px 3px;
+	background: url('http://7xv1io.com1.z0.glb.clouddn.com/product/image/pro_index_search.png') no-repeat 10px center/auto 25px white;
+	position: fixed;
+	top: 15px;left: 15px;right: 15px;
+	z-index: 10;
+}
+.pro-search input{
+	height: 100%;
+	box-sizing: border-box;
+	padding: 5px 0;
+	width: 100%;
+	border: none;
+	background-color: inherit;
+	color: inherit;
+	outline: none;
+}
+.pro-search span{
+	position: absolute;
+	background: url('http://7xv1io.com1.z0.glb.clouddn.com/product/image/pro_index_search1.png') no-repeat 10px center/auto 25px;
+	width: 60px;height: 100%;
+	top: 0;right: 0;
+}

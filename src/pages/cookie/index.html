@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>设置cookie</title>
+    <style type="text/css">
+    	*{appearance: none;-webkit-appearance: none;}
+    	.wrap{margin: 2rem auto;width: 90%;font-size: 1.8rem !important;}
+    	h3{margin: 1.5rem 0;}
+    	input{width: 100%;height: 3rem;}
+    	button{padding: 1rem 1.5rem;margin-top: 1rem;width: 31%;}
+    	.border{border: 1px solid red;}
+    	.label{color: red;}
+    	.table_style{
+    		width: 100%;
+    		border: none;
+    	}
+    	.go-index{
+    		background-color: blue;
+				color: white;
+				background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #43C750), color-stop(1, #31AB40));
+		    border: 1px solid #2E993C;
+		    box-shadow: 0 1px 0 0 #69D273 inset;
+		    padding: 1rem;
+		    margin: 1rem auto;
+		    font-size: 1.6rem;
+		    display: block;
+		    width: 60%;
+		    text-align: center;
+		    text-decoration: none;
+    	}
+    </style>
+    <script src="http://img.wgmf.com/js/vendor.dll.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
+  	<a class="go-index" href="shop/productIndex.html">商城首页</a>
+    <div class="wrap">
+    	<h3 id="docInfo"></h3>
+    	<h3>cookie中openId相关操作</h3>
+    	<div class="label" id="openId-label"></div>
+        <input id="openId" type="text" />
+        <button data-type="openId-set">设置</button>
+        <button data-type="openId-del">清除</button>
+        <button data-type="openId-get">获取</button>
+    </div>
+    <hr>
+    <div class="wrap">
+    	<h3>cookie中customerId相关操作</h3>
+    	<div class="label" id="customerId-label"></div>
+        <input id="customerId" type="text" />
+        <button data-type="customerId-set">设置</button>
+        <button data-type="customerId-del">清除</button>
+        <button data-type="customerId-get">获取</button>
+    </div>
+    <hr>
+    <div class="wrap">
+    	<table class="table_style">
+    		<tr>
+    			<td colspan="2" style="text-align: center;color: red;">常用key值force,staffId</td>
+    		</tr>
+    		<tr>
+    			<td>key</td>
+    			<td><input id="key" type="text"/></td>
+    		</tr>
+    		<tr>
+    			<td>value</td>
+    			<td><input id="value" type="text"/></td>
+    		</tr>
+    		<tr>
+    			<td colspan="2" id="keyInfo" style="text-align: center;color: red;"></td>
+    		</tr>
+    		<tr>
+    			<td colspan="2" style="text-align: center;">
+    				<button data-type="key-set">设置</button>
+			        <button data-type="key-del">清除</button>
+			        <button data-type="key-get">获取</button>
+    			</td>
+    		</tr>
+    	</table>
+    </div>
+		<script type="text/javascript" src="http://7xv1io.com1.z0.glb.clouddn.com/js/lib/vconsole.min.js" ></script> 
+    <!-- built files will be auto injected -->
+  </body>
+</html>
