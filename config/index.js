@@ -28,7 +28,7 @@ pages.push('shop/payOrder')
 pages.push('shop/productDetail')
 pages.push('shop/productIndex')
 pages.push('shop/productList')
-
+pages.push('test')
 //pages.push('shop/internalPayOrder')
 //pages.push('shop/internalProductDetail')
 //pages.push('shop/internalProductList')
@@ -47,7 +47,7 @@ pages.push('shop/groupBooking')
 //pages.push('ticket/getTicket')
 //pages.push('ticket/cardTicket')
 module.exports = {
-	page: 'shop/productDetail',
+	page: 'test',
 	pages: pages,
 	buildAll:true,
 	build: {
